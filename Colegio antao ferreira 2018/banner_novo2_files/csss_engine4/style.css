@@ -1,0 +1,335 @@
+
+/* ------------- General ------------- */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&subset=latin,cyrillic-ext,greek-ext,greek,vietnamese,latin-ext,cyrillic);
+@font-face {
+	font-family: "cs-ctrl-basic";
+	src: url("cs-ctrl-basic.eot");
+	src: url("cs-ctrl-basic.eot#iefix") format("embedded-opentype"),
+			url("cs-ctrl-basic.woff") format("woff"),
+			url("cs-ctrl-basic.ttf") format("truetype"),
+			url("cs-ctrl-basic.svg#basic") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.csslider4 {
+  display: inline-block;
+  position: relative;
+  max-width: 1583px;
+  
+  
+
+  width: 100%;
+}
+.csslider4,
+.csslider4 *,
+.csslider4 *:after,
+.csslider4 *:before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.csslider4 > .cs_anchor {
+  display: none;
+}
+.csslider4 > ul {
+  position: relative;
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 0;
+  
+  overflow: hidden;
+  white-space: nowrap;
+}
+.csslider4 > ul > .cs_skeleton {
+  width: 100%;
+  visibility: hidden;
+  font-size: 0px;
+  line-height: 0;
+}
+
+.csslider4 > ul > .slide.img img {
+  width: 100%;
+}
+
+
+
+.csslider4 > ul > .slide.img a {
+  font-size: 0pt;
+  color: transparent;
+}
+.csslider4 > ul > .slide {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 15px;
+  font-size: initial;
+  line-height: normal;
+  white-space: normal;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.csslider4 .cs_engine{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  font-size: 0pt;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.csslider4 > ul > li.img,
+.csslider4 > .cs_arrowprev,
+.csslider4 > .cs_arrownext,
+.csslider4 > .cs_bullets,
+.csslider4 > .cs_play_pause {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* ------------- /General Styles ------------- */
+
+/* ------------- General Bullets ------------- */
+.csslider4 > .cs_bullets {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+  font-size: 0;
+  line-height: 8pt;
+  text-align: center;
+}
+.csslider4 > .cs_bullets > div {
+  margin-left: -50%;
+  width: 100%;
+}
+.csslider4 > .cs_bullets > label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.csslider4 > .cs_bullets > label > .cs_thumb {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  line-height: 0;
+  left: -75.5px;
+  top: -48px;
+}
+.csslider4 > .cs_bullets > label > .cs_thumb > img {
+  max-width: none;
+}
+/* ------------- /General Bullets ------------- */
+
+/* ------------- Effect ------------- */
+.csslider4 > ul > .slide.num0 {
+  left: 0%;
+}
+.csslider4 > ul > .slide.num1 {
+  left: 100%;
+}
+ 
+
+
+.csslider4 > #cs_slide4_0:checked ~ ul > .slide,
+.csslider4 > #cs_pause4_0:checked ~ ul > .slide {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+.csslider4 > #cs_slide4_1:checked ~ ul > .slide,
+.csslider4 > #cs_pause4_1:checked ~ ul > .slide {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+ 
+
+
+.csslider4 > ul > .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  opacity: 1;
+
+  -webkit-transition: -webkit-transform 2000ms;
+  transition: -webkit-transform 2000ms, transform 2000ms;
+
+  
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+
+
+@-webkit-keyframes slide4 {
+  0%, 37.5%  { -webkit-transform: translateX(0%); transform: translateX(0%); }
+  50%, 87.5%  { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  
+}
+@keyframes slide4 {
+  0%, 37.5%  { -webkit-transform: translateX(0%); transform: translateX(0%); }
+  50%, 87.5%  { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  
+}
+
+@-webkit-keyframes slide4-ie {
+  0%, 37.5%  { margin-left: 0%; }
+  50%, 87.5%  { margin-left: -100%; }
+  
+}
+@keyframes slide4-ie {
+  0%, 37.5%  { margin-left: 0%; }
+  50%, 87.5%  { margin-left: -100%; }
+  
+}
+
+.csslider4  > #cs_play4:checked ~ ul > .slide {
+  
+  -webkit-animation: slide4 16000ms infinite;
+  animation: slide4 16000ms infinite;
+  
+}
+/* IE 10+ hack - cant animate translate :( */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .csslider4  > #cs_play4:checked ~ ul > .slide {
+    animation: slide4-ie 16000ms infinite;
+  }
+}
+
+
+.csslider4 > #cs_play4:checked ~ ul > .slide,
+.csslider4 > .pause:checked ~ ul > .slide {
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+/* ------------- /Effect ------------- */
+
+/* ------------- Template Bullets ------------- */
+.csslider4 > .cs_bullets {
+  bottom: 5px;
+  margin-bottom: 5px;
+}
+.csslider4 > .cs_bullets > label {
+  border-radius: 50%;
+  margin: 0 5px;
+  padding: 9px;
+  background: #FFE800;
+}
+
+
+.csslider4 > .cs_bullets > label > .cs_thumb {
+  border: 3px solid #FFE800;
+  margin-top: -150%;
+  margin-left: 3px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.csslider4 > .cs_bullets > label > .cs_thumb:before {
+  content: '';
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  left: 50%;
+  margin-left: -4px;
+  bottom: -9px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  
+  border-top: 7px solid #FFE800;
+}
+.csslider4 > .cs_bullets > label:hover > .cs_thumb {
+  margin-top: -12px;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.csslider4 > .cs_bullets > label > .cs_point {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2px;
+  margin-top: -2px;
+  background: transparent;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.csslider4 > .cs_bullets > label:hover > .cs_point,
+
+.csslider4 > #cs_slide4_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider4 > #cs_pause4_0:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider4 > #cs_slide4_1:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider4 > #cs_pause4_1:checked ~ .cs_bullets > label.num1 > .cs_point {
+  background: #3A4A5A;
+}
+
+
+
+
+@keyframes bullet4 {
+  0%, 49.99%  { background: #3A4A5A; }
+  50%, 100% { background: transparent; }
+}
+@-webkit-keyframes bullet4 {
+  0%, 49.99%  { background: #3A4A5A; }
+  50%, 100% { background: transparent; }
+}
+
+.csslider4 > #cs_play4:checked ~ .cs_bullets > label.num0 > .cs_point,
+.csslider4 > #cs_pause4:checked ~ .cs_bullets > label.num0 > .cs_point {
+  -webkit-animation: bullet4 16000ms infinite -2000ms;
+  animation: bullet4 16000ms infinite -2000ms;
+}
+.csslider4 > #cs_play4:checked ~ .cs_bullets > label.num1 > .cs_point,
+.csslider4 > #cs_pause4:checked ~ .cs_bullets > label.num1 > .cs_point {
+  -webkit-animation: bullet4 16000ms infinite 6000ms;
+  animation: bullet4 16000ms infinite 6000ms;
+}
+
+
+
+.csslider4 > #cs_play4:checked ~ .cs_bullets > label > .cs_point,
+.csslider4 > .pause:checked ~ .cs_bullets > label > .cs_point {
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+.csslider4 > .slide:checked ~ .cs_bullets > label > .cs_point,
+.csslider4 > .pause:checked ~ .cs_bullets > label > .cs_point {
+  -webkit-animation: none;
+  animation: none;
+}
+
+
+/* ------------- Template /Bullets ------------- */
+/* hide description & bullets on mobile devices */
+@media
+only screen and (max-width: 480px),
+only screen and (-webkit-max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (   max--moz-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (     -o-max-device-pixel-ratio: 2/1)    and (max-width: 480px),
+only screen and (        max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (                max-resolution: 192dpi) and (max-width: 480px),
+only screen and (                max-resolution: 2dppx)  and (max-width: 480px) { 
+  .csslider4 > .cs_description,
+  .csslider4 > .cs_bullets {
+    display: none;
+  }
+}
